@@ -1,0 +1,157 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: darkslategrey;
+    background-color: lightgray;
+    line-height: 18px;    
+}
+.principal{
+    width: 960px;
+    margin: 0 auto;
+}
+h2{
+    font-size: 20px;
+    line-height: 25px;
+    color: darkred;
+}
+h3{
+    font-size: 18px;
+    line-height: 25px;
+    color: darkorange;
+}
+p{
+    text-align: justify;
+}
+header{
+    background: coral;
+    height: 80px;
+    padding: 0;
+    margin: 0;
+}
+nav{
+    float: right; /*float right joga o conteúdo do nav para a direita*/
+    padding: 23px 7px 0 0;
+}
+nav ul{
+    list-style-type: none; /*list-style-type none tira as "bolinhas" dos links*/
+}
+nav ul li{
+    float: left; /*quando se coloca uma série de itens para flutuar à esquerda, um fica à esquerda do outro, em linha*/
+    padding-left: 50px;
+}
+nav ul li a{
+    font-size: 18px;
+    line-height: 24px;
+    color: purple;
+    font-weight: bold;
+}
+nav ul li a:focus{
+    text-decoration: none;
+    color: limegreen;
+}
+nav ul li a.ativo{
+    text-decoration: none;
+    color: limegreen;
+}
+#logo{
+    color: maroon;
+    font-size: 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 10px;
+    float: left;
+}
+aside{
+    float: left;
+    width: 360px;
+}
+aside figure{
+    float: left;
+    border-bottom: 1px solid chocolate;
+    margin-top: 10px;
+    padding: 0;
+    margin: 0;
+}
+aside figure img{
+    float: left;
+    width: 110px;
+    border: 2px solid chocolate;
+    margin-right: 20px; 
+}
+aside figure figcaption{
+    float: left;
+    width: 200px;
+}
+#conteudo{
+    float: left;
+    width: 600px;
+}
+.artigo{
+    border-bottom: 3px solid coral;
+    padding-bottom: 15px;
+}
+.artigo .image{
+    float: right;
+    padding: 3px 0 0 25px;
+}
+.caixa{
+    float: left;
+    width: 280px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+footer{
+    background: darkgray;
+    font-size: 10px;
+    padding: 15px 2px 0 0 ;
+    color: lightgray;
+    margin: 10px;
+    clear: both; /*clear faz com que o footer saia da flutuação*/
+    border-top: 1px solid darkgray;
+    height: 46px;
+}
+.lf{
+    float: left;
+}
+.rf{
+    float: right;
+}/*para que as frases dentro do footer flutuassem separadamente, foi criada uma classe para cada uma no html e no css cada uma ganha uma flutuação*/
+@media only screen and (max-width:600px) {/*a tag @media aplica os estilos dentro das chaves somente na condição imposta (no caso, em telas de até 600px)*/
+    aside{
+        display: none;/*display none remove aquela sessão da página*/
+    }
+    body,
+    #logo,
+    #conteudo,
+    .principal,
+    header,
+    footer,
+    .caixa,
+    .artigo{
+        width: 95%;
+    }
+    footer{
+        margin-top: 0px;
+        height: 0;
+        color: black;
+    }
+    .lf{
+        float: none;
+    }
+    .rf{
+        float: none;
+    }
+    nav ul li a{
+        font-size: 10px;
+        line-height: 10px;
+        display: inline-block;
+        padding: 6px 2px;
+        color: blue;
+    }
+    nav ul li{
+        height: auto;
+        width: auto;
+        padding: 5px;
+    }
+}
